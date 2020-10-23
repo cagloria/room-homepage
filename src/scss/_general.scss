@@ -1,0 +1,19 @@
+body {
+    font-family: $font;
+    margin: 0;
+    background-color: $background;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr;
+}
+
+section {
+    padding: 0 30px;
+}

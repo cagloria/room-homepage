@@ -4,21 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="stylesheet" href="./src/css/index.css" />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
-
-        <link rel="stylesheet" href="./src/css/index.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
         <title>Frontend Mentor | Room homepage</title>
     </head>
     <body>
-        <header>
-            <img src="./images/logo.svg" alt="Room logo" />
-            <nav>
+        <header class="header">
+            <img
+                class="logo header__logo"
+                src="./images/logo.svg"
+                alt="Room logo"
+            />
+
+            <nav class="nav">
                 <button id="nav__button" class="nav__button"></button>
                 <ul class="nav__list">
                     <li>Home</li>
@@ -30,20 +38,23 @@
         </header>
 
         <main>
-            <section>
-                <h2>Discover innovative ways to decorate</h2>
-                <p>
+            <section class="slideshow">
+                <div id="slideshow__image" class="slideshow__image"></div>
+
+                <h1 id="slideshow__header">
+                    Discover innovative ways to decorate
+                </h1>
+                <p id="slideshow__body">
                     We provide unmatched quality, comfort, and style for
                     property owners across the country. Our experts combine form
-                    andnfunction in bringing your vision to life. Create a room
+                    and function in bringing your vision to life. Create a room
                     in your own style with our collection and make your property
                     a reflection of you and what you love.
                 </p>
-            </section>
 
-            <section>
-                <h2>We are available all across the globe</h2>
+                <a href="#">Shop now</a>
 
+                <!-- <h1>We are available all across the globe</h1>
                 <p>
                     With stores all over the world, it's easy for you to find
                     furniture for your home or place of business. Locally, we’re
@@ -51,20 +62,15 @@
                     nearest you using our store locator. Any questions? Don't
                     hesitate to contact us today.
                 </p>
-            </section>
 
-            <section>
-                <h2>Manufactured with the best materials</h2>
-
+                <h1>Manufactured with the best materials</h1>
                 <p>
                     Our modern furniture store provide a high level of quality.
                     Our company has invested in advanced technology to ensure
                     that every product is made as perfect and as consistent as
                     possible. With three decades of experience in this industry,
                     we understand what customers want for their home and office.
-                </p>
-
-                <a href="#">Shop now</a>
+                </p> -->
             </section>
 
             <section>
@@ -82,14 +88,11 @@
             </section>
         </main>
 
-        <footer>
-            <div class="attribution">
-                Challenge by
-                <a href="https://www.frontendmentor.io?ref=challenge"
-                    >Frontend Mentor</a
-                >. Coded by
-                <a href="https://github.com/cagloria">C.A. Gloria</a>.
-            </div>
+        <footer class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/cagloria">C.A. Gloria</a>.
         </footer>
     </body>
 </html>

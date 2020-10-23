@@ -1,3 +1,31 @@
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+section {
+  padding: 0 30px;
+}
+
+.logo {
+  width: 64px;
+  height: 14px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,4 +33,59 @@
 
 .attribution a {
   color: #3e52a3;
+}
+
+.header {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  padding: 50px 30px 0;
+}
+
+.header__logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0 auto;
+}
+
+.nav {
+  position: relative;
+}
+
+.nav__button {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav__list {
+  display: none;
+}
+
+.slideshow__image {
+  position: relative;
+  left: -50%;
+  height: 360px;
+  margin-left: -50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background-image: url("../../images/mobile-image-hero-1.jpg");
+  background-position: bottom;
+  background-size: cover;
 }

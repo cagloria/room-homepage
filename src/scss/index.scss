@@ -1,2 +1,10 @@
-@import "./base/general";
-@import "./base/classes";
+$background: hsl(0, 0%, 100%);
+$font: "Spartan", sans-serif;
+
+// Base
+@import "./general";
+@import "./classes";
+
+// Components
+@import "./header";
+@import "./slideshow";
