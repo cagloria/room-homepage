@@ -80,11 +80,10 @@ section {
 
 .slideshow__image {
   position: relative;
-  left: -50%;
+  left: 50%;
+  width: 100vw;
   height: 360px;
-  margin-left: -50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  margin-left: -50vw;
   background-image: url("../../images/mobile-image-hero-1.jpg");
   background-position: bottom;
   background-size: cover;
