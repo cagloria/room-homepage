@@ -9,4 +9,21 @@
         background-position: bottom;
         background-size: cover;
     }
+
+    h1 {
+        margin: 71px 0 15px;
+    }
+
+    &__link {
+        font-size: 0.94em;
+        display: block;
+        margin: 52px 0 0;
+        text-decoration: none;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: $text-color;
+        img {
+            margin-left: 22px;
+        }
+    }
 }

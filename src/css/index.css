@@ -18,7 +18,20 @@ main {
 }
 
 section {
-  padding: 0 30px;
+  padding: 0 31px;
+}
+
+h1 {
+  font-size: 1.93em;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.09em;
+}
+
+p {
+  font-size: 0.75em;
+  line-height: 20px;
+  letter-spacing: -0.02em;
 }
 
 .logo {
@@ -47,7 +60,7 @@ section {
           box-sizing: border-box;
   width: 100vw;
   height: 75px;
-  padding: 48px 30px 0;
+  padding: 48px 31px 0;
 }
 
 .header__logo {
@@ -155,4 +168,22 @@ section {
   background-image: url("../../images/mobile-image-hero-1.jpg");
   background-position: bottom;
   background-size: cover;
+}
+
+.slideshow h1 {
+  margin: 71px 0 15px;
+}
+
+.slideshow__link {
+  font-size: 0.94em;
+  display: block;
+  margin: 52px 0 0;
+  text-decoration: none;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: black;
+}
+
+.slideshow__link img {
+  margin-left: 22px;
 }
