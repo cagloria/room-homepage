@@ -119,8 +119,16 @@ section {
   color: black;
 }
 
-.header--nav-active .header__logo {
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
   opacity: 0;
+  background-color: black;
 }
 
 .header--nav-active .nav {
@@ -136,6 +144,10 @@ section {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
   background-color: white;
+}
+
+.header--nav-active .nav-overlay {
+  opacity: 0.5;
 }
 
 .slideshow__image {

@@ -61,13 +61,18 @@
     }
 }
 
-.header--nav-active {
-    .header {
-        &__logo {
-            opacity: 0;
-        }
-    }
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    background-color: hsl(0, 0%, 0%);
+}
 
+.header--nav-active {
     .nav {
         z-index: 9;
         &__button {
@@ -79,5 +84,9 @@
             transform: translateX(100vw);
             background-color: $nav-background;
         }
+    }
+
+    .nav-overlay {
+        opacity: 0.5;
     }
 }
