@@ -1,24 +1,32 @@
 .header {
     position: absolute;
-    z-index: 99;
+    z-index: 9;
     top: 0;
     left: 0;
     display: flex;
     box-sizing: border-box;
     width: 100vw;
-    padding: 50px 30px 0;
+    height: 75px;
+    padding: 48px 30px 0;
     &__logo {
         order: 2;
         margin: 0 auto;
+        transition: opacity 0.3s ease-in;
     }
 }
 
 .nav {
-    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    transition: 0.5s ease-in;
     &__button {
         position: absolute;
-        top: -20px;
-        left: -20px;
+        z-index: 99;
+        top: 32px;
+        left: 10px;
         width: 45px;
         height: 45px;
         padding: 0;
@@ -30,6 +38,46 @@
     }
 
     &__list {
-        display: none;
+        font-size: 0.725em;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        display: flex;
+        align-self: flex-end;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        height: 111px;
+        margin: 0;
+        padding: 51px 7px 0 0;
+        list-style-type: none;
+        transition: 0.5s ease-in-out;
+        text-transform: lowercase;
+        a {
+            padding: 15px clamp(10px, 4vw, 16px);
+            text-decoration: none;
+            color: $link-color;
+        }
+    }
+}
+
+.header--nav-active {
+    .header {
+        &__logo {
+            opacity: 0;
+        }
+    }
+
+    .nav {
+        z-index: 9;
+        &__button {
+            background-image: url("../../images/icon-close.svg");
+        }
+
+        &__list {
+            width: 100vw;
+            transform: translateX(100vw);
+            background-color: $nav-background;
+        }
     }
 }
