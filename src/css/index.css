@@ -130,18 +130,19 @@ p {
 
 .nav-overlay {
   position: fixed;
+  z-index: -9;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
   opacity: 0;
   background-color: black;
 }
 
 .header--nav-active .nav {
-  z-index: 9;
+  position: fixed;
 }
 
 .header--nav-active .nav__button {
@@ -155,7 +156,8 @@ p {
   background-color: white;
 }
 
-.header--nav-active .nav-overlay {
+.header--nav-active + .nav-overlay {
+  z-index: 1;
   opacity: 0.5;
 }
 

@@ -61,18 +61,19 @@
 
 .nav-overlay {
     position: fixed;
+    z-index: -9;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    transition: opacity 0.3s ease-in;
+    transition: opacity 0.5s ease-in;
     opacity: 0;
     background-color: hsl(0, 0%, 0%);
 }
 
 .header--nav-active {
     .nav {
-        z-index: 9;
+        position: fixed;
         &__button {
             background-image: url("../../images/icon-close.svg");
         }
@@ -84,7 +85,8 @@
         }
     }
 
-    .nav-overlay {
+    & + .nav-overlay {
+        z-index: 1;
         opacity: 0.5;
     }
 }
