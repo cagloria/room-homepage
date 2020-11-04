@@ -22,16 +22,28 @@ section {
 }
 
 h1 {
-  font-size: 1.93em;
+  font-size: 1.8em;
   font-weight: 600;
-  line-height: 32px;
-  letter-spacing: -0.09em;
+  line-height: 1.125em;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
 }
 
 p {
   font-size: 0.75em;
   line-height: 20px;
   letter-spacing: -0.02em;
+  color: #a1a1a1;
+}
+
+a {
+  color: black;
 }
 
 .logo {
@@ -46,6 +58,13 @@ p {
 
 .attribution a {
   color: #3e52a3;
+}
+
+.full-width {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
 }
 
 .header {
@@ -161,12 +180,12 @@ p {
   opacity: 0.5;
 }
 
+.slideshow {
+  padding-bottom: 72px;
+}
+
 .slideshow__image {
-  position: relative;
-  left: 50%;
-  width: 100vw;
   height: 360px;
-  margin-left: -50vw;
   background-image: url("../../images/mobile-image-hero-1.jpg");
   background-position: bottom;
   background-size: cover;
@@ -177,15 +196,18 @@ p {
 }
 
 .slideshow__link {
-  font-size: 0.94em;
+  font-size: 0.8em;
   display: block;
   margin: 52px 0 0;
   text-decoration: none;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.74em;
   text-transform: uppercase;
-  color: black;
 }
 
 .slideshow__link img {
   margin-left: 22px;
+}
+
+.about-image {
+  margin-bottom: 45px;
 }

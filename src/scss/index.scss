@@ -1,7 +1,7 @@
 $background: hsl(0, 0%, 100%);
 $nav-background: hsl(0, 0%, 100%);
 $link-color: hsl(0, 0%, 0%);
-$text-color: hsl(0, 0%, 0%);
+$text-color: hsl(0, 0%, 63%);
 $font: "Spartan", sans-serif;
 
 // Base
@@ -11,3 +11,6 @@ $font: "Spartan", sans-serif;
 // Components
 @import "./header";
 @import "./slideshow";
+
+// Sections
+@import "./about";

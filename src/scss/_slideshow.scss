@@ -1,10 +1,7 @@
 .slideshow {
+    padding-bottom: 72px;
     &__image {
-        position: relative;
-        left: 50%;
-        width: 100vw;
         height: 360px;
-        margin-left: -50vw;
         background-image: url("../../images/mobile-image-hero-1.jpg");
         background-position: bottom;
         background-size: cover;
@@ -15,13 +12,12 @@
     }
 
     &__link {
-        font-size: 0.94em;
+        font-size: 0.8em;
         display: block;
         margin: 52px 0 0;
         text-decoration: none;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.74em;
         text-transform: uppercase;
-        color: $text-color;
         img {
             margin-left: 22px;
         }

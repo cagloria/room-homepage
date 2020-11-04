@@ -10,3 +10,10 @@
         color: hsl(228, 45%, 44%);
     }
 }
+
+.full-width {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+}
