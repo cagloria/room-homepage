@@ -40,5 +40,10 @@ p {
 }
 
 a {
+    transition: filter 0.3s ease-in;
+    text-decoration: none;
     color: $link-color;
+    &:hover {
+        filter: invert(1) brightness(40%);
+    }
 }

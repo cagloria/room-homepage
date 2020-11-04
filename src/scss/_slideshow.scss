@@ -14,12 +14,19 @@
     &__link {
         font-size: 0.8em;
         display: block;
+        display: flex;
         margin: 52px 0 0;
         text-decoration: none;
         letter-spacing: 0.74em;
         text-transform: uppercase;
-        img {
+        &::after {
+            display: block;
+            width: 40px;
+            height: 12px;
             margin-left: 22px;
+            content: "";
+            background-image: url("../../images/icon-arrow.svg");
+            background-repeat: no-repeat;
         }
     }
 }
