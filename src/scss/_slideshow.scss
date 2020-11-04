@@ -7,6 +7,37 @@
         background-size: cover;
     }
 
+    &__button-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        width: 112px;
+        height: 56px;
+    }
+
+    &__button {
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        background-color: $button-background;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 19%;
+        &:hover {
+            background-color: $button-background-hover;
+        }
+    }
+
+    &__prev-button {
+        background-image: url("../../images/icon-angle-left.svg");
+    }
+
+    &__next-button {
+        background-image: url("../../images/icon-angle-right.svg");
+    }
+
     h1 {
         margin: 71px 0 15px;
     }

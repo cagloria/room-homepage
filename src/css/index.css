@@ -201,6 +201,40 @@ a:hover {
   background-size: cover;
 }
 
+.slideshow__button-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 112px;
+  height: 56px;
+}
+
+.slideshow__button {
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 19%;
+}
+
+.slideshow__button:hover {
+  background-color: #454545;
+}
+
+.slideshow__prev-button {
+  background-image: url("../../images/icon-angle-left.svg");
+}
+
+.slideshow__next-button {
+  background-image: url("../../images/icon-angle-right.svg");
+}
+
 .slideshow h1 {
   margin: 71px 0 15px;
 }
