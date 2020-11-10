@@ -201,6 +201,13 @@ a:hover {
   background-size: cover;
 }
 
+@media only screen and (min-width: 426px) {
+  .slideshow__image {
+    height: 490px;
+    background-image: url("../../images/desktop-image-hero-1.jpg");
+  }
+}
+
 .slideshow__button-container {
   position: absolute;
   right: 0;
@@ -261,6 +268,10 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-.about-image {
-  margin-bottom: 45px;
+.about-header {
+  margin-top: 56px;
+}
+
+.about-body {
+  margin-bottom: 57px;
 }
