@@ -2,12 +2,33 @@
     padding-bottom: 72px;
     &__image {
         height: 360px;
-        background-image: url("../../images/mobile-image-hero-1.jpg");
         background-position: bottom;
         background-size: cover;
+        transition: background-image 0.2s ease-in;
+
         @media only screen and (min-width: 426px) {
             height: 490px;
-            background-image: url("../../images/desktop-image-hero-1.jpg");
+        }
+
+        &--0 {
+            background-image: url("../../images/mobile-image-hero-1.jpg");
+            @media only screen and (min-width: 426px) {
+                background-image: url("../../images/desktop-image-hero-1.jpg");
+            }
+        }
+
+        &--1 {
+            background-image: url("../../images/mobile-image-hero-2.jpg");
+            @media only screen and (min-width: 426px) {
+                background-image: url("../../images/desktop-image-hero-2.jpg");
+            }
+        }
+
+        &--2 {
+            background-image: url("../../images/mobile-image-hero-3.jpg");
+            @media only screen and (min-width: 426px) {
+                background-image: url("../../images/desktop-image-hero-3.jpg");
+            }
         }
     }
 

@@ -29,8 +29,11 @@ const SLIDESHOW = {
 };
 
 function changeSlideshow(value) {
+    const $image = $("#slideshow__image");
     const $heading = $("#slideshow__heading");
     const $body = $("#slideshow__body");
+
+    $image.removeClass(`slideshow__image--${SLIDESHOW.index}`);
 
     SLIDESHOW.index += value;
 
@@ -40,6 +43,7 @@ function changeSlideshow(value) {
         SLIDESHOW.index = SLIDESHOW.content.length - 1;
     }
 
+    $image.addClass(`slideshow__image--${SLIDESHOW.index}`);
     $heading.text(SLIDESHOW.content[SLIDESHOW.index].header);
     $body.text(SLIDESHOW.content[SLIDESHOW.index].body);
 }

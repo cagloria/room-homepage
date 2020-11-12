@@ -201,15 +201,45 @@ a:hover {
 
 .slideshow__image {
   height: 360px;
-  background-image: url("../../images/mobile-image-hero-1.jpg");
   background-position: bottom;
   background-size: cover;
+  -webkit-transition: background-image 0.2s ease-in;
+  transition: background-image 0.2s ease-in;
 }
 
 @media only screen and (min-width: 426px) {
   .slideshow__image {
     height: 490px;
+  }
+}
+
+.slideshow__image--0 {
+  background-image: url("../../images/mobile-image-hero-1.jpg");
+}
+
+@media only screen and (min-width: 426px) {
+  .slideshow__image--0 {
     background-image: url("../../images/desktop-image-hero-1.jpg");
+  }
+}
+
+.slideshow__image--1 {
+  background-image: url("../../images/mobile-image-hero-2.jpg");
+}
+
+@media only screen and (min-width: 426px) {
+  .slideshow__image--1 {
+    background-image: url("../../images/desktop-image-hero-2.jpg");
+  }
+}
+
+.slideshow__image--2 {
+  background-image: url("../../images/mobile-image-hero-3.jpg");
+}
+
+@media only screen and (min-width: 426px) {
+  .slideshow__image--2 {
+    background-image: url("../../images/desktop-image-hero-3.jpg");
   }
 }
 
