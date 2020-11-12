@@ -24,7 +24,7 @@ section {
 h1 {
   font-size: 1.8em;
   font-weight: 600;
-  line-height: 1.125em;
+  line-height: 1.12em;
   letter-spacing: -0.055em;
 }
 
@@ -135,7 +135,7 @@ a:hover {
           box-sizing: border-box;
   height: 111px;
   margin: 0;
-  padding: 51px 7px 0 0;
+  padding: 50px 10px 0 0;
   list-style-type: none;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
@@ -243,7 +243,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 52px 0 0;
+  margin: 53px 0 0;
   text-decoration: none;
   letter-spacing: 0.74em;
   text-transform: uppercase;
@@ -253,7 +253,7 @@ a:hover {
   display: block;
   width: 40px;
   height: 12px;
-  margin-left: 22px;
+  margin: 1px 0 0 34px;
   content: "";
   background-image: url("../../images/icon-arrow.svg");
   background-repeat: no-repeat;
@@ -264,7 +264,7 @@ a:hover {
 }
 
 .about-body {
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
 
 .about-bottom-image {
