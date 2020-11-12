@@ -61,15 +61,6 @@ a:hover {
   height: 14px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
-}
-
 .full-width {
   position: relative;
   left: 50%;
@@ -274,4 +265,8 @@ a:hover {
 
 .about-body {
   margin-bottom: 57px;
+}
+
+.about-bottom-image {
+  margin-bottom: -6px;
 }
