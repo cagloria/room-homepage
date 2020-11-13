@@ -75,6 +75,10 @@ a:hover {
   margin-left: -50vw;
 }
 
+:root {
+  --header-height: 111px;
+}
+
 .header {
   position: absolute;
   z-index: 9;
@@ -86,18 +90,18 @@ a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
-  height: 75px;
-  padding: 48px 31px 0;
+  height: var(--header-height);
 }
 
 .header__logo {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin: 0 auto;
+  margin: 48px auto 0;
 }
 
 .nav {
+  position: absolute;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -106,7 +110,7 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  height: var(--header-height);
 }
 
 .nav__button {

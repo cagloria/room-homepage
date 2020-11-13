@@ -1,3 +1,7 @@
+:root {
+    --header-height: 111px;
+}
+
 .header {
     position: absolute;
     z-index: 9;
@@ -6,20 +10,20 @@
     display: flex;
     box-sizing: border-box;
     width: 100vw;
-    height: 75px;
-    padding: 48px 31px 0;
+    height: var(--header-height);
     &__logo {
         order: 2;
-        margin: 0 auto;
+        margin: 48px auto 0;
     }
 }
 
 .nav {
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    height: var(--header-height);
     &__button {
         position: absolute;
         z-index: 99;
@@ -118,4 +122,7 @@
         z-index: 1;
         opacity: 0.5;
     }
+}
+
+@media only screen and (min-width: 580px) {
 }
