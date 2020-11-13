@@ -51,14 +51,36 @@
         box-sizing: border-box;
         height: 111px;
         margin: 0;
-        padding: 50px 10px 0 0;
+        padding: 36px 8px 0 0;
         list-style-type: none;
         transition: 0.5s ease-in-out;
         text-transform: lowercase;
+        li {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &::after {
+                position: relative;
+                bottom: 10px;
+                width: 0;
+                height: 2px;
+                content: "";
+                transition: width 0.2s ease-in;
+                background-color: $link-color;
+            }
+            &:hover {
+                &::after {
+                    width: 26%;
+                }
+            }
+        }
         a {
             padding: 15px clamp(10px, 4vw, 16px);
             text-decoration: none;
             color: $link-color;
+            &:hover {
+                filter: unset;
+            }
         }
     }
 }

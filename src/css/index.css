@@ -151,17 +151,50 @@ a:hover {
           box-sizing: border-box;
   height: 111px;
   margin: 0;
-  padding: 50px 10px 0 0;
+  padding: 36px 8px 0 0;
   list-style-type: none;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   text-transform: lowercase;
 }
 
+.nav__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__list li::after {
+  position: relative;
+  bottom: 10px;
+  width: 0;
+  height: 2px;
+  content: "";
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  background-color: black;
+}
+
+.nav__list li:hover::after {
+  width: 26%;
+}
+
 .nav__list a {
   padding: 15px clamp(10px, 4vw, 16px);
   text-decoration: none;
   color: black;
+}
+
+.nav__list a:hover {
+  -webkit-filter: unset;
+          filter: unset;
 }
 
 .nav-overlay {
