@@ -28,6 +28,19 @@ const SLIDESHOW = {
     ],
 };
 
+const MEDIA = {
+    mediaQuery580: window.matchMedia("(min-width: 580px)"),
+};
+
+function handleDeviceChange() {
+    const { mediaQuery580 } = MEDIA;
+    const $header = $(".header");
+
+    if (mediaQuery580.matches) {
+        $header.removeClass("header--nav-active");
+    }
+}
+
 function changeSlideshow(value) {
     const $image = $("#slideshow__image");
     const $heading = $("#slideshow__heading");
@@ -74,6 +87,17 @@ window.onload = function () {
     const $navButton = $("#nav__button");
     const $prevButton = $("#slideshow__prev-button");
     const $nextButton = $("#slideshow__next-button");
+    const { mediaQuery580 } = MEDIA;
+
+    try {
+        mediaQuery580.addListener(handleDeviceChange);
+    } catch (error) {
+        mediaQuery580.addEventListener("change", function () {
+            handleDeviceChange();
+        });
+    }
+
+    handleDeviceChange(mediaQuery580);
 
     $navButton.on("click", function () {
         toggleNav();
