@@ -8,6 +8,7 @@ $button-background-hover: hsl(0, 0%, 27%);
 $link-color: hsl(0, 0%, 0%);
 $text-color: hsl(0, 0%, 63%);
 $font: "Spartan", sans-serif;
+$text-width: 50ch;
 
 // Base
 @import "./general";
@@ -15,7 +16,7 @@ $font: "Spartan", sans-serif;
 
 // Components
 @import "./header";
-@import "./slideshow";
 
 // Sections
+@import "./slideshow";
 @import "./about";

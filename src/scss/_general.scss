@@ -16,6 +16,11 @@ main {
 
 section {
     padding: 0 31px;
+
+    @media only screen and (min-width: 426px) {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
 }
 
 h1 {

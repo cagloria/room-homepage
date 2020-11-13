@@ -2,10 +2,9 @@
     padding-bottom: 72px;
     &__image {
         height: 360px;
+        transition: background-image 0.2s ease-in;
         background-position: bottom;
         background-size: cover;
-        transition: background-image 0.2s ease-in;
-
         @media only screen and (min-width: 426px) {
             height: 490px;
         }
@@ -63,8 +62,12 @@
         background-image: url("../../images/icon-angle-right.svg");
     }
 
-    h1 {
+    &__heading {
         margin: 71px 0 15px;
+    }
+
+    &__body, &__heading {
+        max-width: $text-width;
     }
 
     &__link {
@@ -83,6 +86,17 @@
             content: "";
             background-image: url("../../images/icon-arrow.svg");
             background-repeat: no-repeat;
+        }
+    }
+
+    @media only screen and (min-width: 426px) {
+        text-align: center;
+
+        &__body,
+        &__link {
+            width: fit-content;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 }

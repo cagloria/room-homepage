@@ -1,11 +1,43 @@
-.about-header {
-    margin-top: 56px;
+@mixin removeFullWidth($width) {
+    left: unset;
+    width: 100%;
+    max-width: $width;
+    margin-right: unset;
+    margin-left: unset;
 }
 
-.about-body {
-    margin-bottom: 55px;
-}
+.about {
+    &__heading {
+        margin-top: 56px;
+    }
 
-.about-bottom-image {
-    margin-bottom: -6px;
+    &__body {
+        margin-bottom: 55px;
+    }
+
+    &__heading,
+    &__body {
+        max-width: $text-width;
+    }
+
+    &__top-image {
+        max-width: 420px;
+    }
+
+    &__bottom-image {
+        margin-bottom: -6px;
+    }
+
+    @media only screen and (min-width: 426px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &__top-image {
+            @include removeFullWidth(420px);
+        }
+
+        &__bottom-image {
+            @include removeFullWidth(440px);
+        }
+    }
 }
