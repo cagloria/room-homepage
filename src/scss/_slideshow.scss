@@ -1,3 +1,10 @@
+@mixin removeFullWidth($position) {
+    position: $position;
+    left: unset;
+    width: unset;
+    margin-left: unset;
+}
+
 :root {
     --btn-container-desktop-width: 160px;
 }

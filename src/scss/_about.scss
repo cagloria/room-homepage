@@ -7,12 +7,9 @@
 }
 
 .about {
-    &__heading {
-        margin-top: 56px;
-    }
-
-    &__body {
-        margin-bottom: 55px;
+    &__body-container {
+        padding-top: 56px;
+        padding-bottom: 55px;
     }
 
     &__heading,
@@ -38,6 +35,40 @@
 
         &__bottom-image {
             @include removeFullWidth(440px);
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 420px 2fr;
+        grid-template-rows: auto auto;
+        &__top-image,
+        &__bottom-image {
+            grid-column: 1;
+        }
+
+        &__top-image {
+            grid-row: 1;
+        }
+
+        &__bottom-image {
+            margin-bottom: 0;
+            grid-row: 2;
+        }
+
+        &__body-container {
+            padding: 10px 3.2vw 0;
+            grid-row: 1 / -1;
+            grid-column: 2;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        display: flex;
+        flex-direction: row;
+        &__body-container {
+            flex: 1;
         }
     }
 }
