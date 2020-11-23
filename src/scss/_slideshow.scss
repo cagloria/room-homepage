@@ -1,5 +1,5 @@
 :root {
-    --button-container-width-768: 160px;
+    --btn-container-desktop-width: 160px;
 }
 
 .slideshow {
@@ -7,7 +7,6 @@
     &__image {
         height: 360px;
         transition: background-image 0.2s ease-in;
-        background-position: bottom;
         background-size: cover;
         @media only screen and (min-width: 426px) {
             height: 490px;
@@ -117,14 +116,14 @@
         }
 
         &__button-container {
-            right: calc(var(--button-container-width-768) * -1);
-            width: var(--button-container-width-768);
+            right: calc(var(--btn-container-desktop-width) * -1);
+            width: var(--btn-container-desktop-width);
             height: 80px;
         }
 
         &__body-container {
             flex: 1;
-            padding: 50px 7vw;
+            padding: 0 7vw 50px;
         }
 
         &__heading {
@@ -133,7 +132,23 @@
 
         &__link {
             margin-top: 32px;
+        }
+
+        &__body,
+        &__link {
             margin-left: 0;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        &__body-container {
+            padding-top: 50px;
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        &__image {
+            background-position: center 25%;
         }
     }
 }
