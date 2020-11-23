@@ -1,0 +1,6 @@
+@mixin removeFullWidth($position) {
+    position: $position;
+    left: unset;
+    width: unset;
+    margin-left: unset;
+}

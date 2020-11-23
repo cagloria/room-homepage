@@ -11,6 +11,7 @@ $font: "Spartan", sans-serif;
 $text-width: 50ch;
 
 // Base
+@import "./mixins";
 @import "./general";
 @import "./classes";
 

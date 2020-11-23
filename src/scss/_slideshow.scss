@@ -1,3 +1,7 @@
+:root {
+    --button-container-width-768: 160px;
+}
+
 .slideshow {
     padding-bottom: 72px;
     &__image {
@@ -66,7 +70,8 @@
         margin: 71px 0 15px;
     }
 
-    &__body, &__heading {
+    &__body,
+    &__heading {
         max-width: $text-width;
     }
 
@@ -97,6 +102,38 @@
             width: fit-content;
             margin-right: auto;
             margin-left: auto;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        display: flex;
+        padding: 0;
+        text-align: left;
+        &__image {
+            flex: 0 2 58.3%;
+            height: 534px;
+
+            @include removeFullWidth(relative);
+        }
+
+        &__button-container {
+            right: calc(var(--button-container-width-768) * -1);
+            width: var(--button-container-width-768);
+            height: 80px;
+        }
+
+        &__body-container {
+            flex: 1;
+            padding: 50px 7vw;
+        }
+
+        &__heading {
+            margin: 70px 0 26px;
+        }
+
+        &__link {
+            margin-top: 32px;
+            margin-left: 0;
         }
     }
 }

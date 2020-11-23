@@ -24,10 +24,14 @@ section {
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: clamp(1.8em, 3vw, 2.5em);
     font-weight: 600;
     line-height: 1.12em;
     letter-spacing: -0.055em;
+
+    @media only screen and (min-width: 1024px) {
+        letter-spacing: -0.042em;
+    }
 }
 
 h2 {

@@ -29,10 +29,16 @@ section {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: clamp(1.8em, 3vw, 2.5em);
   font-weight: 600;
   line-height: 1.12em;
   letter-spacing: -0.055em;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    letter-spacing: -0.042em;
+  }
 }
 
 h2 {
@@ -269,6 +275,10 @@ a:hover {
   }
 }
 
+:root {
+  --button-container-width-768: 160px;
+}
+
 .slideshow {
   padding-bottom: 72px;
 }
@@ -391,6 +401,44 @@ a:hover {
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slideshow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    text-align: left;
+  }
+  .slideshow__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 2 58.3%;
+            flex: 0 2 58.3%;
+    height: 534px;
+    position: relative;
+    left: unset;
+    width: unset;
+    margin-left: unset;
+  }
+  .slideshow__button-container {
+    right: calc(var(--button-container-width-768) * -1);
+    width: var(--button-container-width-768);
+    height: 80px;
+  }
+  .slideshow__body-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 50px 7vw;
+  }
+  .slideshow__heading {
+    margin: 70px 0 26px;
+  }
+  .slideshow__link {
+    margin-top: 32px;
+    margin-left: 0;
   }
 }
 
