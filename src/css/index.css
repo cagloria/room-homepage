@@ -76,7 +76,8 @@ a:hover {
 }
 
 :root {
-  --header-height: 111px;
+  --header-height: 120px;
+  --link-color: black;
 }
 
 .header {
@@ -157,8 +158,10 @@ a:hover {
   margin: 0;
   padding: 36px 8px 0 0;
   list-style-type: none;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   text-transform: lowercase;
 }
 
@@ -177,13 +180,13 @@ a:hover {
 
 .nav__list li::after {
   position: relative;
-  bottom: 10px;
+  bottom: 7px;
   width: 0;
   height: 2px;
   content: "";
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
-  background-color: black;
+  background-color: var(--link-color);
 }
 
 .nav__list li:hover::after {
@@ -193,7 +196,7 @@ a:hover {
 .nav__list a {
   padding: 15px clamp(10px, 4vw, 16px);
   text-decoration: none;
-  color: black;
+  color: var(--link-color);
 }
 
 .nav__list a:hover {
@@ -237,6 +240,33 @@ a:hover {
 .header--nav-active + .nav-overlay {
   z-index: 1;
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 580px) {
+  :root {
+    --link-color: white;
+  }
+  .header__logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 64px;
+    margin-left: 65px;
+  }
+  .nav {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .nav__button {
+    display: none;
+  }
+  .nav__list {
+    top: 13px;
+    left: 167px;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .slideshow {
